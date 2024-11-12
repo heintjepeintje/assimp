@@ -1,13 +1,13 @@
 #ifndef ASSIMP_REVISION_H_INC
 #define ASSIMP_REVISION_H_INC
 
-#define GitVersion 0x@GIT_COMMIT_HASH@
+#define GitVersion 0
 #define GitBranch "@GIT_BRANCH@"
 
-#define VER_MAJOR @ASSIMP_VERSION_MAJOR@
-#define VER_MINOR @ASSIMP_VERSION_MINOR@
-#define VER_PATCH @ASSIMP_VERSION_PATCH@
-#define VER_BUILD @ASSIMP_PACKAGE_VERSION@
+#define VER_MAJOR 1
+#define VER_MINOR 1
+#define VER_PATCH 1
+#define VER_BUILD 1
 
 #define STR_HELP(x) #x
 #define STR(x) STR_HELP(x)
