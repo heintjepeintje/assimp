@@ -5,6 +5,8 @@ project "Assimp"
 	
 	files {
 		"./code/AssetLib/OBJ/**.cpp",
+		"./code/AssetLib/glTF/**.cpp",
+		"./code/AssetLib/glTF2/**.cpp",
 		"./code/Common/**.cpp",
 		"./code/Geometry/**.cpp",
 		"./code/Material/**.cpp",
@@ -19,12 +21,12 @@ project "Assimp"
 		"./contrib",
 		"./contrib/zlib",
 		"./contrib/unzip",
-		"./contrib/utf8cpp/source"
+		"./contrib/utf8cpp/source",
+		"./contrib/rapidjson/include"
 	}
 
-	-- We only support the OBJ file format for now
-
 	defines {
+		"RAPIDJSON_HAS_STDSTRING",
 		"ASSIMP_BUILD_NO_USD_IMPORTER",
 		"ASSIMP_BUILD_NO_X_IMPORTER",
 		"ASSIMP_BUILD_NO_AMF_IMPORTER",
@@ -34,7 +36,6 @@ project "Assimp"
 		"ASSIMP_BUILD_NO_MD2_IMPORTER",
 		"ASSIMP_BUILD_NO_PLY_IMPORTER",
 		"ASSIMP_BUILD_NO_ASE_IMPORTER",
-		-- "ASSIMP_BUILD_NO_OBJ_IMPORTER",
 		"ASSIMP_BUILD_NO_HMP_IMPORTER",
 		"ASSIMP_BUILD_NO_SMD_IMPORTER",
 		"ASSIMP_BUILD_NO_MDC_IMPORTER",
@@ -68,9 +69,6 @@ project "Assimp"
 		"ASSIMP_BUILD_NO_XGL_IMPORTER",
 		"ASSIMP_BUILD_NO_FBX_IMPORTER",
 		"ASSIMP_BUILD_NO_ASSBIN_IMPORTER",
-		"ASSIMP_BUILD_NO_GLTF_IMPORTER",
-		"ASSIMP_BUILD_NO_GLTF1_IMPORTER",
-		"ASSIMP_BUILD_NO_GLTF2_IMPORTER",
 		"ASSIMP_BUILD_NO_C4D_IMPORTER",
 		"ASSIMP_BUILD_NO_3MF_IMPORTER",
 		"ASSIMP_BUILD_NO_X3D_IMPORTER",
